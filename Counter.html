@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#container{
+    text-align: center;
+    margin-top: 250px;
+}
+#title{
+font-size: 45px;
+}
+#value{
+font-size: 75px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.buton{
+border-radius: 15px;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="title">Counter</h1>
+        <p id="value">0</p>
+        <button class="buton" onclick="decrease()">DECREASE</button>
+        <button class="buton" onclick="reset()">RESET</button>
+        <button class="buton" onclick="increase()">INCREASE</button>
+    </div>
+</body>
+<script>
+    var value=document.getElementById("value");
+    var id=0;
+    function increase(){
+        id=id+1;
+        value.innerText=id;
+        if(id>0){
+            value.style.color="green";
+        }
+
+    }
+    function decrease(){
+        id=id-1;
+        value.innerText=id;
+        if(id<0){
+            value.style.color="red";
+        }
+    }
+    function reset(){
+        id=0;
+        value.innerText=0;
+        if(id==0){
+            value.style.color="black";
+        }
+    }
+</script>
+</html>
